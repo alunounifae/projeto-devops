@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session 
 from app import models, schemas
 
 def create_task(db: Session, task: schemas.TaskCreate):
