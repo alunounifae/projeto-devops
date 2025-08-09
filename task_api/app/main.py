@@ -8,7 +8,6 @@ models.Base.metadata.create_all(bind=database.engine)
 
 app = FastAPI()
 
-# ✅ Corrigido com Depends
 @app.post("/tasks/", response_model=Task)
 def create_task(task: TaskCreate, db: Session = Depends(database.get_db)):
     return crud.create_task(db, task)
