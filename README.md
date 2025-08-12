@@ -26,7 +26,7 @@ Uma API voltada para gerenciamento de tarefas
 Clone o projeto
 
 ```bash
-  git clone https://link-para-o-projeto
+  git clone https://github.com/alunounifae/projeto-devops
 ```
 
 Entre no diretório do projeto
