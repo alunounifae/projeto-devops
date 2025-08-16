@@ -38,7 +38,7 @@ def read_tasks(skip: int = 0, limit: int = 10, db: Session = Depends(get_db)):
 def read_task(task_id: int, db: Session = Depends(get_db)):
     task = db.query(models.Task).filter(models.Task.id == task_id).first()
     if not task:
-        raise HTTPException(status_code=404, detail="Task not found")
+        raise HTTPException(status_code=404, detail="Tarefa não encontrada")
     return task
 
 
@@ -47,7 +47,7 @@ def read_task(task_id: int, db: Session = Depends(get_db)):
 def update_task(task_id: int, task_update: schemas.TaskUpdate, db: Session = Depends(get_db)):
     task = db.query(models.Task).filter(models.Task.id == task_id).first()
     if not task:
-        raise HTTPException(status_code=404, detail="Task not found")
+        raise HTTPException(status_code=404, detail="Tarefa não encontrada")
 
     if task_update.title is not None:
         task.title = task_update.title
@@ -64,10 +64,10 @@ def update_task(task_id: int, task_update: schemas.TaskUpdate, db: Session = Dep
 def delete_task(task_id: int, db: Session = Depends(get_db)):
     task = db.query(models.Task).filter(models.Task.id == task_id).first()
     if not task:
-        raise HTTPException(status_code=404, detail="Task not found")
+        raise HTTPException(status_code=404, detail="Tarefa não encontrada")
     db.delete(task)
     db.commit()
-    return {"message": "Task deleted successfully"}
+    return {"message": "Tarefa deletada com sucesso"}
 
 
 # Executar o servidor diretamente com `python app/main.py`
