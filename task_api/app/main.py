@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-from app import models, schemas, database
+import models, schemas, database
 
 # Cria as tabelas no banco
 models.Base.metadata.create_all(bind=database.engine)
@@ -73,4 +73,4 @@ def delete_task(task_id: int, db: Session = Depends(get_db)):
 # Executar o servidor diretamente com `python app/main.py`
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
