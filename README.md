@@ -20,6 +20,11 @@ Uma API voltada para gerenciamento de tarefas
 
 **Cloud:** AWS, Terraform
 
+**CI/CD**: GitHub Actions
+- Integração automática de código-fonte atualizado
+- Instalação de dependências necessárias
+- Execução de testes após transferência de dados para a branch principal
+
 
 ## Rodando localmente
 
