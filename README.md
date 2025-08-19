@@ -52,3 +52,9 @@ Inicie o servidor
   python main.py
 ```
 
+Rodar os testes
+
+```bash
+  pytest
+```
+
