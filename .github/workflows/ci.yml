@@ -25,4 +25,4 @@ jobs:
           pip install -r task_api/requirements.txt
 
       - name: Rodar testes com pytest
-        run: PYTHONPATH=. pytest --maxfail=1 --disable-warnings -q
+        run: PYTHONPATH=task_api/app pytest --maxfail=1 --disable-warnings -q
