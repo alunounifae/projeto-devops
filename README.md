@@ -20,6 +20,8 @@ Uma API voltada para gerenciamento de tarefas
 
 **Cloud:** AWS, Terraform
 
+**Banco de Dados:** PostgreSQL com NeonDB
+
 **CI/CD**: GitHub Actions
 - Integração automática de código-fonte atualizado
 - Instalação de dependências necessárias
