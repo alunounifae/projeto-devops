@@ -1,16 +1,27 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import declarative_base, sessionmaker
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./tasks.db"
 
+
+# URL do banco PostgreSQL na Neon
+from dotenv import load_dotenv
+from os import getenv
+
+load_dotenv()
+NEONDB_POSTRGRE_URL= getenv("NEONDB_POSTRGRE_URL")
+
+# Criação do engine com melhorias
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
+    NEONDB_POSTRGRE_URL,
+    pool_pre_ping=True,
+    connect_args={"sslmode": "require"}  # Importante para NeonDB
 )
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+print("Conexão carregada:", NEONDB_POSTRGRE_URL)
 
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
+# Dependência para FastAPI
 def get_db():
     db = SessionLocal()
     try:
