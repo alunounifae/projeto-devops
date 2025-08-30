@@ -28,3 +28,9 @@ jobs:
 
       - name: Rodar testes com pytest
         run: pytest --maxfail=1 --disable-warnings -q
+
+      - name: Instalar Bandit
+        run: pip install bandit
+
+      - name: Análise de segurança com Bandit
+        run: bandit -r task_api
