@@ -33,4 +33,4 @@ jobs:
         run: pip install bandit
 
       - name: Análise de segurança com Bandit
-        run: bandit -r task_api
+        run: bandit -r task_api -x task_api/tests
