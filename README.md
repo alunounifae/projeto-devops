@@ -27,6 +27,7 @@ Uma API voltada para gerenciamento de tarefas
 - Instalação de dependências necessárias
 - Execução de testes após transferência de dados para a branch principal
 - Dependabot para automatizar a validação das versões das dependências do projeto
+- Biblioteca bandit para verificar segurança do código
 
 
 ## Rodando localmente
