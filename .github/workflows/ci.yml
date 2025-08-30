@@ -26,13 +26,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r task_api/requirements.txt
 
-      - name: Instalar pip-review
-        run: |
-          pip install pip-review
-
-      - name: Validar versões das dependências
-        run: |
-          pip-review --local --auto
-
       - name: Rodar testes com pytest
         run: pytest --maxfail=1 --disable-warnings -q
