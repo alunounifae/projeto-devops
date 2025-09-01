@@ -53,7 +53,7 @@ Instale as dependências
 Inicie o servidor
 
 ```bash
-  python main.py
+  python app/main.py
 ```
 
 Rodar os testes
