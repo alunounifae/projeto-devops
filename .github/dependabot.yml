@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/task_api"
+    schedule:
+      interval: "weekly"
