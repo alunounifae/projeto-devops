@@ -1,8 +1,10 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-import models, schemas, database
-
+import models 
+import schemas
+import database
 import os
+import sys
 
 # Cria as tabelas no banco
 models.Base.metadata.create_all(bind=database.engine)
