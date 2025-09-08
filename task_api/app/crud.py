@@ -1,8 +1,5 @@
 from sqlalchemy.orm import Session 
-import models
-import schemas
-import os
-import sys
+from task_api.app import models, schemas
 
 def create_task(db: Session, task: schemas.TaskCreate):
     db_task = models.Task(**task.dict())
