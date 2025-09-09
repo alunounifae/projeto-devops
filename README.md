@@ -19,7 +19,7 @@ Uma API voltada para gerenciamento de tarefas
 
 **Cloud:** Google Cloud
 
-**Banco de Dados:** PostgreSQL com NeonDB
+**Banco de Dados:** PostgreSQL com NeonDB (produção), SQLITE (testes)
 
 **CI/CD**: GitHub Actions
 
@@ -28,6 +28,8 @@ Uma API voltada para gerenciamento de tarefas
 - Execução de testes após transferência de dados para a branch principal
 - Dependabot para automatizar a validação das versões das dependências do projeto
 - Biblioteca bandit para verificar segurança do código
+- Biblioteca flake8 para verificar formatação do código
+- Biblioteca black para formatação automática do código
 
 ## Rodando localmente
 
