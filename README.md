@@ -17,6 +17,8 @@ Uma API voltada para gerenciamento de tarefas
 
 **Back-end:** Python, FastAPI, Uvicorn (Local), Gunicorn (Cloud)
 
+**Front-end:** React (não hospedado)
+
 **Cloud:** Google Cloud
 
 **Banco de Dados:** PostgreSQL com NeonDB (produção), SQLITE (testes)
